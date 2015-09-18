@@ -37,7 +37,8 @@ void loop(){
   //wait for doorbell to activate, but smooth it out with a lowpass, to avoid noise issues.
   while(voltage>threshold) voltage = ( voltage*alpha + analogRead(input_pin) ) / (alpha+1); //crude lowpass
 
-  tmrpcm.play("zelda.wav");
+  tmrpcm.play("scmirtz.wav");
+
   while(tmrpcm.isPlaying()); //wait for sound to stop
 
   tmrpcm.disable(); //stop the sound generating timer
